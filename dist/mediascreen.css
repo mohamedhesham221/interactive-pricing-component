@@ -1,0 +1,57 @@
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    display: grid;
+    place-content: center;
+  }
+  .component, .component-desc {
+    width: 430px;
+  }
+  .discount {
+    justify-content: space-evenly;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-position-y: -100px;
+  }
+  .header {
+    height: 190px;
+  }
+  .header-describe {
+    width: 100%;
+  }
+  .range, .price{
+    display: inherit;
+    align-items: center;
+  }
+  .range {
+    order: 3;
+  }
+  .price {
+    order: 2;
+  }
+  .only-mobile {
+    display: none !important;
+  }
+  .only-desktop {
+    width: 80px !important;
+    display: inline-block !important;
+  }
+  .component-desc {
+    display: flex;
+    text-align: initial;
+    justify-content: space-between;
+  }
+  .discount {
+    margin: 20px 0;
+    justify-content: end;
+    margin-right: 15px;
+  }
+  .checkbox {
+    margin: 0 15px;
+  }
+}

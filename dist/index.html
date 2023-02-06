@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediascreen.css">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+
+<body>
+  <main>
+    <header class="header">
+      <h1 class="header-head">Simple, traffic-based pricing</h1>
+      <p class="header-describe">Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+    <div class="container">
+      <div class="component">
+        <div class="pricing">
+          <p class="page-views"><span id="pageviews">100k</span>&nbsp;&nbsp;Pageviews</p>
+          <div class="range">
+            <input type="range" min="0" max="100" value="50" id="slider" step="25" />
+            <span class="fillInput"></span>
+          </div>
+          <p class="price">
+            <span>$</span>
+            <span id="price">16.00</span>&nbsp;<sup>/month</sup>
+          </p>
+        </div>
+        <div class="discount">
+          <div class="monthly">
+            <p>Monthly Billing</p>
+          </div>
+          <div class="checkbox">
+            <label for="check">
+              <input type="checkbox" id="check">
+              <span class="toggle-checkbox"></span>
+            </label>
+          </div>
+          <div class="yearly">
+            <p>Yearly Billing</p>
+            <span class="only-mobile">-25%</span>
+            <span class="only-desktop">-25% discount</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="component-desc">
+        <ul class="list">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button>Start my trial</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Muhammad Hisham</a>.
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

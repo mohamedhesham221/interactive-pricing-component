@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+:root {
+  --fullSliderBar: hsl(174, 77%, 80%);
+  --sliderBackground: hsl(174, 86%, 45%);
+  --discountBackground: hsl(14, 92%, 95%);
+  --discountText: hsl(15, 100%, 70%);
+  --ctaText: hsl(226, 100%, 87%);
+
+  --pricingComponentBackground: hsl(0, 0%, 100%);
+  --mainBackground: hsl(230, 100%, 99%);
+  --emptySliderBar: hsl(224, 65%, 95%);
+  --toggleBackground: hsl(223, 50%, 87%);
+  --text: hsl(225, 20%, 60%);
+  --textCTABackground: hsl(227, 35%, 25%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: no-repeat 0 0 url(./images/bg-pattern.svg);
+  background-color: var(--mainBackground);
+}
+.header {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  background: no-repeat center url(./images/pattern-circles.svg);
+  line-height: 2;
+  display: grid;
+  place-content: center;
+}
+.header-head {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--textCTABackground);
+}
+.header-describe {
+  font-size: 15px;
+  width: 220px;
+  margin: auto;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+.component, .component-desc {
+  width: 100%;
+  height: 100%;
+  background-color: var(--pricingComponentBackground);
+  text-align: center;
+  padding: 20px;
+}
+.component {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.component-desc {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-views {
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+  margin: auto;
+}
+.range {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  position: relative;
+  margin: 30px 0;
+}
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: var(--emptySliderBar);
+  border-radius: 5px;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+}
+.fillInput {
+  display: block;
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  background: var(--fullSliderBar);
+  background: linear-gradient(90deg, rgba(165,243,235,1) 80%, rgba(16,213,194,1) 100%);
+  border-radius: 20px 0 0 20px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: no-repeat center url(./images/icon-slider.svg);
+  background-color: var(--sliderBackground);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px 0 var(--sliderBackground);
+  transition: all .2s linear;
+  cursor: pointer;
+}
+input[type="range"]::-moz-slider-thumb {
+  appearance: none;
+  background: no-repeat center url(./images/icon-slider.svg);
+  background-color: var(--sliderBackground);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px 0 var(--sliderBackground);
+  transition: all .2s linear;
+  cursor: pointer;
+}
+input[type="range"]::-ms-slider-thumb {
+  appearance: none;
+  background: no-repeat center url(./images/icon-slider.svg);
+  background-color: var(--sliderBackground);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px 0 var(--sliderBackground);
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+
+input[type="range"]::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+input[type="range"]::-moz-slider-thumb:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+input[type="range"]::-ms-slider-thumb:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: hsla(174, 86%, 45%, 0.658);
+}
+input[type="range"]::-moz-slider-thumb:hover {
+  background-color: hsla(174, 86%, 45%, 0.658);
+}
+input[type="range"]::-ms-slider-thumb:hover {
+  background-color: hsla(174, 86%, 45%, 0.658);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+.price {
+  margin: auto;
+}
+.price {
+  color: var(--text);
+}
+.price span {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--textCTABackground);
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.checkbox {
+  margin: 0 5px;
+  padding-top: 5px;
+}
+.discount p {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-right: 5px;
+  align-self: center;
+}
+.monthly, .yearly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.only-mobile {
+  display: inline-block !important;
+}
+.only-desktop {
+  display: none !important;
+}
+label {
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: var(--toggleBackground);
+  padding: 5px;
+  transition: all .2s linear;
+  cursor: pointer;
+}
+label:hover {
+  background-color: var(--sliderBackground)
+}
+label input {
+  display: none;
+}
+.toggle-checkbox {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--pricingComponentBackground);
+  float: left;
+}
+label input:checked + .toggle-checkbox {
+  float: right;
+}
+.yearly span {
+  width: 40px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: var(--discountBackground);
+  color: var(--discountText);
+  font-size: 10px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+hr {
+  border-top-color: rgba(223, 223, 223, 0.26);
+}
+.list {
+  list-style-image: url(./images/icon-check.svg);
+  list-style-position: inside;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+}
+.list li {
+  margin: 8px;
+}
+button {
+  width: 130px;
+  height: 35px;
+  background-color: var(--textCTABackground);
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  margin-top: 25px;
+  color: var(--ctaText);
+  cursor: pointer;
+  transition: all .2s linear;
+}
+button:hover {
+  color: #fff;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
